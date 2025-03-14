@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-13T19:15:53 IST" name="Default suite" finished-at="2025-03-13T19:16:03 IST" duration-ms="9875">
+  <suite started-at="2025-03-14T19:09:11 IST" name="Default suite" finished-at="2025-03-14T19:09:13 IST" duration-ms="2304">
     <groups>
     </groups>
-    <test started-at="2025-03-13T19:15:53 IST" name="Default test" finished-at="2025-03-13T19:16:03 IST" duration-ms="9875">
-      <class name="tests.TestContactPage">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.TestContactPage@710f4dc7]" started-at="2025-03-13T19:15:51 IST" name="setup" finished-at="2025-03-13T19:15:53 IST" duration-ms="1853" status="PASS">
+    <test started-at="2025-03-14T19:09:11 IST" name="Default test" finished-at="2025-03-14T19:09:13 IST" duration-ms="2304">
+      <class name="tests.TestGitLogin">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.TestGitLogin@d35dea7]" started-at="2025-03-14T19:09:09 IST" name="setup" finished-at="2025-03-14T19:09:11 IST" duration-ms="1668" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testContactPage()[pri:0, instance:tests.TestContactPage@710f4dc7]" started-at="2025-03-13T19:15:53 IST" name="testContactPage" finished-at="2025-03-13T19:16:03 IST" duration-ms="9835" status="PASS">
+        <test-method signature="testLogin()[pri:0, instance:tests.TestGitLogin@d35dea7]" started-at="2025-03-14T19:09:11 IST" name="testLogin" finished-at="2025-03-14T19:09:13 IST" duration-ms="2267" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testContactPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestContactPage@710f4dc7]" started-at="2025-03-13T19:16:03 IST" name="tearDown" finished-at="2025-03-13T19:16:03 IST" duration-ms="181" status="PASS">
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestGitLogin@d35dea7]" started-at="2025-03-14T19:09:14 IST" name="tearDown" finished-at="2025-03-14T19:09:14 IST" duration-ms="289" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.TestContactPage -->
+      </class> <!-- tests.TestGitLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

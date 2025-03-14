@@ -14,7 +14,7 @@ public class TestHomepage extends BaseTest {
 	public void testHomePage() {
 		homepage = new HomePage(driver);
 		driver.get(ConfigReader.get("url"));
-		System.out.println(homepage.getNavBar().isDisplayed());
+//		System.out.println(homepage.getNavBar().isDisplayed());
 
 	}
 }

@@ -11,9 +11,8 @@ public class ConfigReader {
 	static {
 
 		try {
-			System.out.println("loading");
-			File propsFile  = new File("D:\\STUDENTS\\Testing-Jan-2025\\testNgBp\\src\\main\\resources\\props.properties");
-			System.out.println(propsFile.exists());
+			File propsFile = new File(
+					"D:\\STUDENTS\\Testing-Jan-2025\\testNgBp\\src\\main\\resources\\props.properties");
 			FileInputStream file = new FileInputStream(propsFile);
 			props.load(file);
 		} catch (Exception e) {
