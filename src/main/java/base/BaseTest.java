@@ -17,9 +17,10 @@ public class BaseTest {
 
 	@AfterSuite
 	public void tearDown() {
-		if (driver != null) {
+		
+			System.out.println("quited");
 			driver.quit();
-		}
+		
 	}
 
 }
