@@ -9,30 +9,25 @@ import pages.Contactus;
 
 public class TestContactPage extends BaseTest {
 
-	
 	Contactus contactpage;
-	
-	@BeforeClass
-	public void beforeclass() {
-		System.out.println("contact poage");
-	}
-	@Test
+
+	@Test(groups = {"sanity"})
 	public void testContactPage() {
-		
 		contactpage = new Contactus(driver);
-		System.out.println("contact poage");
-		driver.get(ConfigReader.get("url")+"/contactus");
+		driver.get(ConfigReader.get("url") + "/contactus");
 		contactpage.enterEnquiryFor("hello world");
-		
+		System.out.println("contact page sanity");
+
 	}
+
 	@Test
 	public void aTest() {
 		System.out.println("test 1 from contact page");
 	}
 
-	@Test
+	@Test(groups = {"sanity"})
 	public void bTest() {
-		System.out.println("test 2 from contact page");
+		System.out.println("test 2 from contact page sanity");
 	}
 
 	@Test
@@ -45,9 +40,9 @@ public class TestContactPage extends BaseTest {
 		System.out.println("test 4 from contact page");
 	}
 
-	@Test
+	@Test(groups = {"regression"})
 	public void sTest() {
-		System.out.println("test 5 from contact page");
+		System.out.println("test 5 from contact page regression");
 	}
 
 }

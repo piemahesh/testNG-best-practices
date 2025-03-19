@@ -1,8 +1,8 @@
 package base;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 import util.DriverManager;
 
@@ -10,17 +10,19 @@ public class BaseTest {
 
 	protected WebDriver driver;
 
-	@BeforeSuite
+	@BeforeClass
 	public void setup() {
+		System.out.println("im parent home test before class");
+		System.out.println("==============================");
 		this.driver = DriverManager.getDriver();
+		if (this.driver == null) {
+			throw new RuntimeException("WebDriver not initialized!");
+		}
 	}
 
-	@AfterSuite
-	public void tearDown() {
-		
-			System.out.println("quited");
-			driver.quit();
-		
+	@AfterClass
+	public void tearDown() throws InterruptedException {
+		Thread.sleep(4000);
+		DriverManager.quitDriver();
 	}
-
 }

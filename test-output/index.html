@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -55,12 +55,12 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>3 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">12 methods, 1 failed,   11 passed</span>
+                    <span class="method-stats">12 methods, 2 failed,   10 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,7 +103,12 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.TestContactPage" class="method navigator-link" hash-for-method="testContactPage">testContactPage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tests.TestHomepage" class="method navigator-link" hash-for-method="aTest">aTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.TestHomepage" class="method navigator-link" hash-for-method="testHomePage">testHomePage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -122,11 +127,6 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.TestHomepage" class="method navigator-link" hash-for-method="aTest">aTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tests.TestHomepage" class="method navigator-link" hash-for-method="bTest">bTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -137,22 +137,22 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.TestContactPage" class="method navigator-link" hash-for-method="cTest">cTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tests.TestHomepage" class="method navigator-link" hash-for-method="cTest">cTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.TestContactPage" class="method navigator-link" hash-for-method="kTest">kTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tests.TestContactPage" class="method navigator-link" hash-for-method="cTest">cTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tests.TestHomepage" class="method navigator-link" hash-for-method="kTest">kTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.TestContactPage" class="method navigator-link" hash-for-method="kTest">kTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -167,7 +167,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.TestHomepage" class="method navigator-link" hash-for-method="testHomePage">testHomePage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tests.TestContactPage" class="method navigator-link" hash-for-method="testContactPage">testContactPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -185,21 +185,41 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">tests.TestContactPage</span>
+              <span class="class-name">tests.TestHomepage</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testContactPage">
-                  </a> <!-- testContactPage -->
-                  <span class="method-name">testContactPage</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
-	at tests.TestContactPage.testContactPage(TestContactPage.java:24)
+                  <a name="aTest">
+                  </a> <!-- aTest -->
+                  <span class="method-name">aTest</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
+	at tests.TestHomepage.aTest(TestHomepage.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 6 stack frames
+... Removed 15 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testHomePage">
+                  </a> <!-- testHomePage -->
+                  <span class="method-name">testHomePage</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at tests.TestHomepage.testHomePage(TestHomepage.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+... Removed 15 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -246,6 +266,13 @@
                   <span class="method-name">sTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testContactPage">
+                  </a> <!-- testContactPage -->
+                  <span class="method-name">testContactPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
           <div class="suite-Suite-class-passed">
@@ -254,13 +281,6 @@
               <span class="class-name">tests.TestHomepage</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="aTest">
-                  </a> <!-- aTest -->
-                  <span class="method-name">aTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="bTest">
@@ -289,13 +309,6 @@
                   <span class="method-name">sTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testHomePage">
-                  </a> <!-- testHomePage -->
-                  <span class="method-name">testHomePage</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
@@ -307,13 +320,17 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test time-out=&quot;5000&quot; thread-count=&quot;5&quot; name=&quot;HomeTest&quot;&gt;
+&lt;suite parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;HomeTest&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.TestHomepage&quot;/&gt;
-      &lt;class name=&quot;tests.TestContactPage&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- HomeTest --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;ContactTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tests.TestContactPage&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ContactTest --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -325,7 +342,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">HomeTest (2 classes)</span>
+                <span class="test-name">HomeTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">ContactTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -335,6 +355,42 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">adhoc</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">kTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">regression</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">bTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">sTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">sanity</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">aTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">bTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testContactPage</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -353,58 +409,58 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(12);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testHomePage')
-data.setCell(0, 2, 'tests.TestHomepage')
-data.setCell(0, 3, 2119);
+data.setCell(0, 1, 'testContactPage')
+data.setCell(0, 2, 'tests.TestContactPage')
+data.setCell(0, 3, 1304);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testContactPage')
-data.setCell(1, 2, 'tests.TestContactPage')
-data.setCell(1, 3, 85);
+data.setCell(1, 1, 'cTest')
+data.setCell(1, 2, 'tests.TestHomepage')
+data.setCell(1, 3, 24);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'aTest')
 data.setCell(2, 2, 'tests.TestHomepage')
 data.setCell(2, 3, 13);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'cTest')
-data.setCell(3, 2, 'tests.TestContactPage')
-data.setCell(3, 3, 8);
+data.setCell(3, 1, 'testHomePage')
+data.setCell(3, 2, 'tests.TestHomepage')
+data.setCell(3, 3, 10);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'sTest')
+data.setCell(4, 1, 'cTest')
 data.setCell(4, 2, 'tests.TestContactPage')
-data.setCell(4, 3, 7);
+data.setCell(4, 3, 8);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'aTest')
-data.setCell(5, 2, 'tests.TestContactPage')
+data.setCell(5, 1, 'sTest')
+data.setCell(5, 2, 'tests.TestHomepage')
 data.setCell(5, 3, 6);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'kTest')
-data.setCell(6, 2, 'tests.TestContactPage')
+data.setCell(6, 2, 'tests.TestHomepage')
 data.setCell(6, 3, 6);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'bTest')
-data.setCell(7, 2, 'tests.TestContactPage')
-data.setCell(7, 3, 5);
+data.setCell(7, 2, 'tests.TestHomepage')
+data.setCell(7, 3, 2);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'cTest')
-data.setCell(8, 2, 'tests.TestHomepage')
-data.setCell(8, 3, 4);
+data.setCell(8, 1, 'kTest')
+data.setCell(8, 2, 'tests.TestContactPage')
+data.setCell(8, 3, 2);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'sTest')
-data.setCell(9, 2, 'tests.TestHomepage')
-data.setCell(9, 3, 3);
+data.setCell(9, 1, 'aTest')
+data.setCell(9, 2, 'tests.TestContactPage')
+data.setCell(9, 3, 2);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'kTest')
-data.setCell(10, 2, 'tests.TestHomepage')
-data.setCell(10, 3, 3);
+data.setCell(10, 1, 'bTest')
+data.setCell(10, 2, 'tests.TestContactPage')
+data.setCell(10, 3, 2);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'bTest')
-data.setCell(11, 2, 'tests.TestHomepage')
-data.setCell(11, 3, 2);
+data.setCell(11, 1, 'sTest')
+data.setCell(11, 2, 'tests.TestContactPage')
+data.setCell(11, 3, 1);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -419,18 +475,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">tests.TestContactPage</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">setup</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -440,74 +487,83 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">tests.TestHomepage</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
+              <div class="configuration-class before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
-              <div class="test-method">
-                <span class="method-name">aTest</span>
-                <span class="method-start">1923 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">bTest</span>
-                <span class="method-start">1939 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">cTest</span>
-                <span class="method-start">1943 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">kTest</span>
-                <span class="method-start">1950 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">sTest</span>
-                <span class="method-start">1955 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testHomePage</span>
-                <span class="method-start">1959 ms</span>
-              </div> <!-- test-method -->
+              </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.TestContactPage</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">beforeclass</span>
-                <span class="method-start">4087 ms</span>
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.TestHomepage</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">aTest</span>
-                <span class="method-start">4092 ms</span>
+                <span class="method-start">104 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">bTest</span>
-                <span class="method-start">4106 ms</span>
+                <span class="method-start">130 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">cTest</span>
-                <span class="method-start">4120 ms</span>
+                <span class="method-start">147 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">kTest</span>
-                <span class="method-start">4132 ms</span>
+                <span class="method-start">183 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sTest</span>
-                <span class="method-start">4142 ms</span>
+                <span class="method-start">196 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testContactPage</span>
-                <span class="method-start">4160 ms</span>
+                <span class="method-name">testHomePage</span>
+                <span class="method-start">207 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">228 ms</span>
+              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.TestHomepage</div> <!-- chronological-class-name -->
-              <div class="configuration-suite after">
+              <div class="chronological-class-name">tests.TestContactPage</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">aTest</span>
+                <span class="method-start">2130 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">bTest</span>
+                <span class="method-start">2135 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">cTest</span>
+                <span class="method-start">2139 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">kTest</span>
+                <span class="method-start">2151 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">sTest</span>
+                <span class="method-start">2158 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testContactPage</span>
+                <span class="method-start">2163 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">4330 ms</span>
-              </div> <!-- configuration-suite after -->
+                <span class="method-start">3469 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

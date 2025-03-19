@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="HomeTest(failed)">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="HomeTest(failed)">
     <classes>
-      <class name="tests.TestContactPage">
+      <class name="tests.TestHomepage">
         <methods>
-          <include name="testContactPage"/>
-          <include name="setup"/>
           <include name="tearDown"/>
-          <include name="beforeclass"/>
+          <include name="setup"/>
+          <include name="testHomePage"/>
+          <include name="aTest"/>
         </methods>
-      </class> <!-- tests.TestContactPage -->
+      </class> <!-- tests.TestHomepage -->
     </classes>
   </test> <!-- HomeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
