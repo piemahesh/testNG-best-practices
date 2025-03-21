@@ -3,7 +3,6 @@ package base;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
 import util.DriverManager;
 
 public class BaseTest {
@@ -12,12 +11,16 @@ public class BaseTest {
 
 	@BeforeClass
 	public void setup() {
-		System.out.println("im parent home test before class");
-		System.out.println("==============================");
+		System.out.println("Initializing WebDriver in BaseTest...");
+
+		DriverManager.setDriver("chrome"); //  Explicitly set the driver first
 		this.driver = DriverManager.getDriver();
+
 		if (this.driver == null) {
 			throw new RuntimeException("WebDriver not initialized!");
 		}
+
+		System.out.println("Driver initialized successfully: " + driver);
 	}
 
 	@AfterClass

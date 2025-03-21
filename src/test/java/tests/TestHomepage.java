@@ -2,6 +2,8 @@ package tests;
 
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeGroups;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
@@ -13,34 +15,31 @@ import pages.HomePage;
 public class TestHomepage extends BaseTest {
 
 	HomePage homepage;
-	
-	@BeforeClass
-	public void setup() {
-		
-		System.out.println("im child home test before class");
-		System.out.println(driver+"dsfsdafasdf");
+
+	@BeforeGroups
+	public void setupChild() {
+		System.out.println("Initializing HomePage in TestHomepage...");
+		if (driver == null) {
+			throw new RuntimeException("Driver is NULL in TestHomepage! Check BaseTest.");
+		}
 		homepage = new HomePage(driver);
-		System.out.println(driver);
-		System.out.println("====================");
+		driver.get(ConfigReader.get("url"));
+		
 	}
 
-	@Test
+	@Test(groups = {"regression"})
 	public void testHomePage() throws InterruptedException {
-
-		System.out.println(driver);
-		driver.get(ConfigReader.get("url"));
+		System.out.println("Driver in testHomePage: " + driver);
+		System.out.println(homepage.getDriver().getCurrentUrl());
 		System.out.println("Home page is tested");
-		homepage.whatsNew();
-//		System.out.println(homepage.getNavBar().isDisplayed());
-
 	}
 
 	@Test(groups = { "sanity" })
 	public void aTest() {
+
 		WebElement whatsNew = homepage.getWhatsNew();
 		System.out.println("=============================");
-		System.out.println(whatsNew.isDisplayed());
-		System.out.println("test 1 sanity");
+		System.out.println("Is 'What's New' displayed? " + whatsNew.isDisplayed());
 	}
 
 	@Test(groups = { "regression", "sanity" })

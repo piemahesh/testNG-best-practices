@@ -9,41 +9,11 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">HomeTest</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">4,291</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">ContactTest</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">7,691</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">10</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">11,982</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">testShoping</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">78</td><td>myTesting, regression, sanity</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">HomeTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">tests.TestHomepage</td><td><a href="#m0">aTest</a></td><td rowspan="1">1742392045255</td><td rowspan="1">13</td></tr><tr class="failedeven"><td><a href="#m1">testHomePage</a></td><td rowspan="1">1742392045358</td><td rowspan="1">10</td></tr><tr><th colspan="4">HomeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">tests.TestHomepage</td><td><a href="#m2">bTest</a></td><td rowspan="1">1742392045281</td><td rowspan="1">2</td></tr><tr class="passedeven"><td><a href="#m3">cTest</a></td><td rowspan="1">1742392045298</td><td rowspan="1">24</td></tr><tr class="passedeven"><td><a href="#m4">kTest</a></td><td rowspan="1">1742392045334</td><td rowspan="1">6</td></tr><tr class="passedeven"><td><a href="#m5">sTest</a></td><td rowspan="1">1742392045347</td><td rowspan="1">6</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">ContactTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">tests.TestContactPage</td><td><a href="#m6">aTest</a></td><td rowspan="1">1742392047281</td><td rowspan="1">2</td></tr><tr class="passedeven"><td><a href="#m7">bTest</a></td><td rowspan="1">1742392047286</td><td rowspan="1">2</td></tr><tr class="passedeven"><td><a href="#m8">cTest</a></td><td rowspan="1">1742392047290</td><td rowspan="1">8</td></tr><tr class="passedeven"><td><a href="#m9">kTest</a></td><td rowspan="1">1742392047302</td><td rowspan="1">2</td></tr><tr class="passedeven"><td><a href="#m10">sTest</a></td><td rowspan="1">1742392047309</td><td rowspan="1">1</td></tr><tr class="passedeven"><td><a href="#m11">testContactPage</a></td><td rowspan="1">1742392047314</td><td rowspan="1">1304</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">testShoping &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">tests.TestOnlineShoping</td><td><a href="#m0">checkStock</a></td><td rowspan="1">1742564425388</td><td rowspan="1">2</td></tr><tr class="passedeven"><td><a href="#m1">login</a></td><td rowspan="1">1742564425365</td><td rowspan="1">12</td></tr></tbody>
 </table>
-<h2>HomeTest</h2><h3 id="m0">tests.TestHomepage#aTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
-	at tests.TestHomepage.aTest(TestHomepage.java:42)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.TestHomepage#testHomePage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
-	at tests.TestHomepage.testHomePage(TestHomepage.java:31)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.TestHomepage#bTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.TestHomepage#cTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.TestHomepage#kTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">tests.TestHomepage#sTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>ContactTest</h2><h3 id="m6">tests.TestContactPage#aTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">tests.TestContactPage#bTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">tests.TestContactPage#cTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">tests.TestContactPage#kTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">tests.TestContactPage#sTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">tests.TestContactPage#testContactPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>testShoping</h2><h3 id="m0">tests.TestOnlineShoping#checkStock</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.TestOnlineShoping#login</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -5,36 +5,38 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
 
 public class HomePage {
 
 	WebDriver driver;
+	WebDriverWait wait; // ✅ Add WebDriverWait
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(2)); // ✅ Set a 10-second wait
 		PageFactory.initElements(driver, this);
 	}
 
 	private By navBar = By.xpath("//*[@id=\"root\"]/section[1]/nav");
 
 	public WebElement getNavBar() {
-		return driver.findElement(navBar);
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(navBar)); // ✅ Ensure visibility before
+																					// returning
 	}
 
 	public WebDriver getDriver() {
 		return driver;
 	}
 
-	public WebElement getWhatsNew() {
-		return whatsNew;
-	}
-
 	@FindBy(className = "whatsNewAtOcean")
 	WebElement whatsNew;
 
-	public boolean whatsNew() {
-		System.out.println(whatsNew.isDisplayed());
-		return whatsNew.isDisplayed();
+	public WebElement getWhatsNew() {
+		return wait.until(ExpectedConditions.visibilityOf(whatsNew)); // ✅ Wait for element to be visible
 	}
 
+	
 }
